@@ -12,7 +12,9 @@ const PokemonSlice = createSlice({
     setSidePokemon: (state, action) => {
       state.sideSectionPokemon = action.payload;
     },
-    setGlobalPokemons: () => {},
+    setGlobalPokemons: (state, action) => {
+      state.pokemons = action.payload;
+    },
   },
 });
 

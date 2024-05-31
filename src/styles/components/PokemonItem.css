@@ -1,0 +1,21 @@
+.PokemonItem-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px;
+  padding: 4px;
+  border-radius: 7px;
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.name {
+  margin-left: 10px;
+}
+
+.Pokeball-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}

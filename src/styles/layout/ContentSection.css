@@ -1,6 +1,10 @@
 .ContentSection-wrapper {
-  min-width: 70%;
   max-width: 70%;
+  width: 100%;
 
   padding: 2vh;
+}
+
+.pagination-controls {
+  margin: 10px 3%;
 }
