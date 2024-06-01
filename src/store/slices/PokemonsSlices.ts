@@ -3,10 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   pokemons: [],
   sideSectionPokemon: "",
+  selectedPokemon: "",
 };
 
 const PokemonSlice = createSlice({
-  name: "pokemons",
+  name: "pokemonsGlobal",
   initialState,
   reducers: {
     setSidePokemon: (state, action) => {
@@ -14,6 +15,9 @@ const PokemonSlice = createSlice({
     },
     setGlobalPokemons: (state, action) => {
       state.pokemons = action.payload;
+    },
+    setSelectedPokemon: (state, action) => {
+      state.selectedPokemon = action.payload;
     },
   },
 });

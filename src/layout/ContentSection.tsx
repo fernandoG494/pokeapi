@@ -34,6 +34,7 @@ const ContentSection = () => {
         console.log(results);
         dispatcher(setGlobalPokemons(results));
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset]);
 
   return (

@@ -7,14 +7,20 @@ import Pokeball from "../assets/Pokeball.png";
 import "../styles/components/PokemonItem.css";
 
 const PokemonItem = ({ url, name }: IPokemonItem) => {
+  // const [dataUrl, setDataUrl] = useState(url);
   const [capitalizeName] = useState(
     name.charAt(0).toUpperCase() + name.slice(1)
   );
 
-  // const [dataUrl, setDataUrl] = useState(url);
+  const handlePokemonSelection = () => {
+    console.log(name, url);
+  };
 
   return (
-    <div className="PokemonItem-wrapper">
+    <div
+      className="PokemonItem-wrapper"
+      onClick={() => handlePokemonSelection()}
+    >
       <Stack direction="row" justifyContent="space-between">
         <div className="name">{capitalizeName}</div>
         <img src={Pokeball} alt="pokeball" className="Pokeball-icon" />

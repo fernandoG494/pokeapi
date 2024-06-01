@@ -1,19 +1,23 @@
 .PokemonItem-wrapper {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin: 10px;
-  padding: 4px;
+  margin-bottom: 10px;
   border-radius: 7px;
+  transition: background-color 0.3s ease; /* Agregamos una transición suave */
 
   :hover {
     cursor: pointer;
+    border-radius: 7px;
+    background-color: #f0f0f0; /* Cambiamos el color de fondo al hacer hover */
   }
 }
 
 .name {
+  padding: 4px;
   margin-left: 10px;
 }
 
 .Pokeball-icon {
+  padding: 4px;
   width: 20px;
   height: 20px;
   margin-top: auto;
