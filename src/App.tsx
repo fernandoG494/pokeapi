@@ -1,9 +1,10 @@
+import { Divider, Stack } from "@mui/material";
+
+import Router from "./routes/Router";
+import SideSection from "./layout/SideSection";
 import AppContainer from "./layout/AppContainer";
 
 import "./App.css";
-import SideSection from "./layout/SideSection";
-import ContentSection from "./layout/ContentSection";
-import { Divider, Stack } from "@mui/material";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Stack direction="row">
           <SideSection />
           <Divider orientation="vertical" flexItem />
-          <ContentSection />
+          <Router />
         </Stack>
       </AppContainer>
     </div>

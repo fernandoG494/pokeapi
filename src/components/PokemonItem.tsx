@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-import { IPokemonItem } from "../interfaces/Pokemon";
 import Pokeball from "../assets/Pokeball.png";
+import { Capitalize } from "../utils/utilities";
+import { IPokemonItem } from "../interfaces/Pokemon";
 
 import "../styles/components/PokemonItem.css";
 
-const PokemonItem = ({ url, name }: IPokemonItem) => {
-  // const [dataUrl, setDataUrl] = useState(url);
-  const [capitalizeName] = useState(
-    name.charAt(0).toUpperCase() + name.slice(1)
-  );
+const PokemonItem = ({ name }: IPokemonItem) => {
+  const navigate = useNavigate();
+
+  const [capitalizeName] = useState(Capitalize(name));
 
   const handlePokemonSelection = () => {
-    console.log(name, url);
+    navigate(`/${name}`);
   };
 
   return (

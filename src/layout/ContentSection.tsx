@@ -31,7 +31,6 @@ const ContentSection = () => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`)
       .then((response) => response.json())
       .then(({ results }) => {
-        console.log(results);
         dispatcher(setGlobalPokemons(results));
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -2,12 +2,12 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 10px;
   border-radius: 7px;
-  transition: background-color 0.3s ease; /* Agregamos una transición suave */
+  transition: background-color 0.3s ease;
 
   :hover {
     cursor: pointer;
     border-radius: 7px;
-    background-color: #f0f0f0; /* Cambiamos el color de fondo al hacer hover */
+    background-color: #f0f0f0;
   }
 }
 

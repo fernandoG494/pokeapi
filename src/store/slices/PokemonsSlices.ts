@@ -22,5 +22,6 @@ const PokemonSlice = createSlice({
   },
 });
 
-export const { setSidePokemon, setGlobalPokemons } = PokemonSlice.actions;
+export const { setSidePokemon, setGlobalPokemons, setSelectedPokemon } =
+  PokemonSlice.actions;
 export default PokemonSlice.reducer;

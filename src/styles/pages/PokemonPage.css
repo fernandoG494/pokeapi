@@ -1,0 +1,16 @@
+.PokemonDetails-wrapper {
+  margin: 2vh 3%;
+  width: 100%;
+}
+
+.link-text {
+  text-decoration: none;
+}
+
+.type-wrapper {
+  text-align: center;
+}
+
+.data-wrapper {
+  margin-top: 1vh;
+}
