@@ -8,12 +8,12 @@ import {
   setSidePokemon,
 } from "../store/slices/PokemonsSlices";
 import { RootState } from "../store/store";
+import { Capitalize } from "../utils/utilities";
+import StatsDisplay from "../components/StatsDisplay";
+import PokemonTypeSnack from "../components/PokemonTypeSnack";
 import { IPokemonData, IPokemonItem } from "../interfaces/Pokemon";
 
 import "../styles/pages/PokemonPage.css";
-import PokemonTypeSnack from "../components/PokemonTypeSnack";
-import { Capitalize } from "../utils/utilities";
-import StatsDisplay from "../components/StatsDisplay";
 
 const PokemonPage = () => {
   const { name } = useParams();
@@ -35,6 +35,15 @@ const PokemonPage = () => {
     if (indexedPokemon?.url) {
       return indexedPokemon.url;
     }
+  };
+
+  const handleDefaultPokemon = () => {
+    fetch("https://pokeapi.co/api/v2/pokemon/raichu")
+      .then((response) => response.json())
+      .then((result) => {
+        dispatcher(setSidePokemon(result.sprites.front_default));
+        dispatcher(setSelectedPokemon(""));
+      });
   };
 
   useEffect(() => {
@@ -64,7 +73,11 @@ const PokemonPage = () => {
   return (
     <div className="PokemonDetails-wrapper">
       <div>
-        <Link to="/" className="link-text">
+        <Link
+          to="/"
+          className="link-text"
+          onClick={() => handleDefaultPokemon()}
+        >
           Go back
         </Link>
       </div>
@@ -121,7 +134,6 @@ const PokemonPage = () => {
                 <Typography variant="h6">Abilities</Typography>
                 <Stack direction="column">
                   {pokemon.abilities.map(({ ability }) => {
-                    console.log(ability.name);
                     return <div key={ability.name}>{ability.name}</div>;
                   })}
                 </Stack>

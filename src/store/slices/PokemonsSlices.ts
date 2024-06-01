@@ -4,6 +4,7 @@ const initialState = {
   pokemons: [],
   sideSectionPokemon: "",
   selectedPokemon: "",
+  pokemonIndex: 0,
 };
 
 const PokemonSlice = createSlice({
@@ -19,9 +20,16 @@ const PokemonSlice = createSlice({
     setSelectedPokemon: (state, action) => {
       state.selectedPokemon = action.payload;
     },
+    setPokemonIndex: (state, action) => {
+      state.pokemonIndex = action.payload;
+    },
   },
 });
 
-export const { setSidePokemon, setGlobalPokemons, setSelectedPokemon } =
-  PokemonSlice.actions;
+export const {
+  setSidePokemon,
+  setGlobalPokemons,
+  setSelectedPokemon,
+  setPokemonIndex,
+} = PokemonSlice.actions;
 export default PokemonSlice.reducer;

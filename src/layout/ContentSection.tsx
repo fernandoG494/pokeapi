@@ -5,25 +5,38 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import PokemonItem from "../components/PokemonItem";
 import { IPokemonItem } from "../interfaces/Pokemon";
-import { setGlobalPokemons } from "../store/slices/PokemonsSlices";
+import {
+  setGlobalPokemons,
+  setPokemonIndex,
+} from "../store/slices/PokemonsSlices";
 
 import "../styles/layout/ContentSection.css";
 
 const ContentSection = () => {
-  const [offset, setOffset] = useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_offset, setOffset] = useState(
+    useSelector((state: RootState) => state.pokemonsGlobal.pokemonIndex)
+  );
 
   const dispatcher = useDispatch();
   const pokemonsState: IPokemonItem[] = useSelector(
     (state: RootState) => state.pokemonsGlobal.pokemons
   );
 
+  const offset = useSelector(
+    (state: RootState) => state.pokemonsGlobal.pokemonIndex
+  );
+
   const handleOffsetChange = (value: number) => {
     if (offset + value <= 0) {
       setOffset(0);
+      dispatcher(setPokemonIndex(0));
     } else if (offset + value > 8) {
       setOffset(8);
+      dispatcher(setPokemonIndex(8));
     } else {
       setOffset(offset + value);
+      dispatcher(setPokemonIndex(offset + value));
     }
   };
 
