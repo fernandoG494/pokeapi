@@ -1,6 +1,5 @@
 .AppContainer-wrapper {
   background-color: #faf9f6;
-  min-width: 100vh;
-
   border-radius: 10px;
+  min-width: 100vh;
 }

@@ -8,11 +8,10 @@ import { setSidePokemon } from "../store/slices/PokemonsSlices";
 import "../styles/layout/SideSection.css";
 
 const SideSection = () => {
+  const dispatcher = useDispatch();
   const initialPokemon = useSelector(
     (state: RootState) => state.pokemonsGlobal.sideSectionPokemon
   );
-
-  const dispatcher = useDispatch();
 
   useEffect(() => {
     if (initialPokemon == "") {

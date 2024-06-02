@@ -1,8 +1,8 @@
 .SideSection-wrapper {
-  min-width: 30%;
   max-width: 30%;
-  text-align: center;
+  min-width: 30%;
   padding: 2vh;
+  text-align: center;
 }
 
 .Icon-wrapper {

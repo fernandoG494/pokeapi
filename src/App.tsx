@@ -8,15 +8,13 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
-      <AppContainer>
-        <Stack direction="row">
-          <SideSection />
-          <Divider orientation="vertical" flexItem />
-          <Router />
-        </Stack>
-      </AppContainer>
-    </div>
+    <AppContainer>
+      <Stack direction="row">
+        <SideSection />
+        <Divider orientation="vertical" flexItem />
+        <Router />
+      </Stack>
+    </AppContainer>
   );
 }
 

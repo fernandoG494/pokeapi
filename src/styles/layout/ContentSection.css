@@ -1,8 +1,7 @@
 .ContentSection-wrapper {
   max-width: 70%;
-  width: 100%;
-
   padding: 2vh;
+  width: 100%;
 }
 
 .pagination-controls {

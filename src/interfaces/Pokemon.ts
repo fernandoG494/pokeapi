@@ -11,8 +11,6 @@ export interface IStatsDisplay {
   data: IPokemonData;
 }
 
-// interfaces/Pokemon.ts
-
 export interface IStat {
   base_stat: number;
   effort: number;

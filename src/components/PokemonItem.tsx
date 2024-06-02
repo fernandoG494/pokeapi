@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 import Pokeball from "../assets/Pokeball.png";
-import { Capitalize } from "../utils/utilities";
+import { Capitalize } from "../utils/TextTransformers";
 import { IPokemonItem } from "../interfaces/Pokemon";
 
 import "../styles/components/PokemonItem.css";

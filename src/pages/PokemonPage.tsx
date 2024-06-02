@@ -8,7 +8,7 @@ import {
   setSidePokemon,
 } from "../store/slices/PokemonsSlices";
 import { RootState } from "../store/store";
-import { Capitalize } from "../utils/utilities";
+import { Capitalize } from "../utils/TextTransformers";
 import StatsDisplay from "../components/StatsDisplay";
 import PokemonTypeSnack from "../components/PokemonTypeSnack";
 import { IPokemonData, IPokemonItem } from "../interfaces/Pokemon";
@@ -19,10 +19,10 @@ const PokemonPage = () => {
   const { name } = useParams();
   const dispatcher = useDispatch();
 
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [pokemon, setPokemon] = useState<IPokemonData>(
     [] as unknown as IPokemonData
   );
-  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const storePokemon = useSelector(
     (state: RootState) => state.pokemonsGlobal.selectedPokemon
@@ -67,7 +67,6 @@ const PokemonPage = () => {
           });
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
