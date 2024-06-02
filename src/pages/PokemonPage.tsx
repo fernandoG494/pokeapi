@@ -77,7 +77,7 @@ const PokemonPage = () => {
           className="link-text"
           onClick={() => handleDefaultPokemon()}
         >
-          Go back
+          <Typography className="GoBack-text">Go back</Typography>
         </Link>
       </div>
       {isLoading ? (

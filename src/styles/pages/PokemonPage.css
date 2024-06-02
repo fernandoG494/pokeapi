@@ -14,3 +14,8 @@
 .data-wrapper {
   margin-top: 1vh;
 }
+
+.GoBack-text {
+  font-size: 10px;
+  color: slategray;
+}
